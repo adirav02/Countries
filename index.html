@@ -66,19 +66,32 @@
             placeholder="Search for a country..."
           />
         </div>
-        <div class="dropdown-wrapper">
+        <div class="dropdown-wrapper" onclick="onRegionFilterWrapperClick()">
           <div class="dropdown-header flex flex-jc-sb flex-ai-c">
             <span>Filter by Region</span>
             <i class="fa-regular fa-chevron-down icon"></i>
           </div>
+
           <div class="dropdown-body">
             <ul>
-              <li data-region="all">All</li>
-              <li data-region="africa">Africa</li>
-              <li data-region="americas">America</li>
-              <li data-region="asia">Asia</li>
-              <li data-region="europe">Europe</li>
-              <li data-region="oceania">Oceania</li>
+              <li data-region="all" onclick="onRegionFIlterChange(event)">
+                All
+              </li>
+              <li data-region="africa" onclick="onRegionFIlterChange(event)">
+                Africa
+              </li>
+              <li data-region="americas" onclick="onRegionFIlterChange(event)">
+                America
+              </li>
+              <li data-region="asia" onclick="onRegionFIlterChange(event)">
+                Asia
+              </li>
+              <li data-region="europe" onclick="onRegionFIlterChange(event)">
+                Europe
+              </li>
+              <li data-region="oceania" onclick="onRegionFIlterChange(event)">
+                Oceania
+              </li>
             </ul>
           </div>
         </div>
@@ -87,72 +100,12 @@
     <!-- Countries -->
     <main class="main">
       <div class="container">
-        <section class="countries-grid">
-          <a
-            href="#"
-            class="country scale-effect"
-            data-country-name="Afghanistan"
-          >
-            <div class="country-flag">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg"
-                alt="Afghanistan FLag"
-              />
-            </div>
-            <div class="country-info">
-              <h2 class="country-title">Afghanistan</h2>
-              <ul class="country-brief">
-                <li><strong>population: </strong>40218234</li>
-                <li><strong>Region: </strong>Asia</li>
-                <li><strong>capital: </strong>Kabul</li>
-              </ul>
-            </div>
-          </a>
-          <a
-            href="#"
-            class="country scale-effect"
-            data-country-name="Åland Islands"
-          >
-            <div class="country-flag">
-              <img src="https://flagcdn.com/ax.svg" alt="Åland Islands FLag" />
-            </div>
-            <div class="country-info">
-              <h2 class="country-title">Åland Islands</h2>
-              <ul class="country-brief">
-                <li><strong>population: </strong>28875</li>
-                <li><strong>Region: </strong>Europe</li>
-                <li><strong>capital: </strong>Mariehamn</li>
-              </ul>
-            </div>
-          </a>
-          <a href="#" class="country scale-effect" data-country-name="Aruba">
-            <div class="country-flag">
-              <img src="https://flagcdn.com/aw.svg" alt="Aruba FLag" />
-            </div>
-            <div class="country-info">
-              <h2 class="country-title">Aruba</h2>
-              <ul class="country-brief">
-                <li><strong>population: </strong>106766</li>
-                <li><strong>Region: </strong>Americas</li>
-                <li><strong>capital: </strong>Oranjestad</li>
-              </ul>
-            </div>
-          </a>
-          <a href="#" class="country scale-effect" data-country-name="Belize">
-            <div class="country-flag">
-              <img src="https://flagcdn.com/bz.svg" alt="Belize FLag" />
-            </div>
-            <div class="country-info">
-              <h2 class="country-title">Belize</h2>
-              <ul class="country-brief">
-                <li><strong>population: </strong>397621</li>
-                <li><strong>Region: </strong>Americas</li>
-                <li><strong>capital: </strong>Belmopan</li>
-              </ul>
-            </div>
-          </a>
-        </section>
+        <section
+          class="countries-grid"
+          onclick="onCountryItemClick(event)"
+        ></section>
       </div>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
